@@ -1,0 +1,22 @@
+{
+  "name": "hangman",
+  "version": "0.0.1",
+  "description": "Simple hangman game - BDD exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duiliopastorelli/hangman.git"
+  },
+  "author": "Duilio Pastorelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/duiliopastorelli/hangman/issues"
+  },
+  "homepage": "https://github.com/duiliopastorelli/hangman#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
