@@ -1,22 +1,25 @@
 'use strict';
 
 class Word {
-    constructor(word) {
-        this.word = word;
+    constructor(uri, lowLimit, highLimit) {
+        this.uri = uri;
+        this.lowLimit = lowLimit;
+        this.highLimit = highLimit;
     }
 
-    retrieveJSON(){
-        let data = require('../mocks/words.json');
-        // let data = '{"words": ["drain","terrific","dysfunctional","new"]}';
-        // let result = JSON.parse(data);
+    getWord() {
+        let availableWords = this.retrieveJSON(this.uri);
+
+        return "dysfunctional";
+    }
+
+    retrieveJSON(uri){
+        let data = require(uri);
         return data.words;
     }
 
-    getWord(){
-
-        let foo = ['foo','bar','baz'];
-        return foo
-        //return this.word
+    checkShortnerWord(word, limit) {
+        return word.length < limit;
     }
 }
 
